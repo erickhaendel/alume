@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alume - Precificação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .pricing-header {
+            max-width: 700px;
+        }
+
+        .card-deck .card {
+            min-width: 220px;
+        }
+
+        .border-top {
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .box-shadow {
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        }
+
+        .sub-title {
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .final-price-title {
+            margin-top: 38px;
+            background: #000000ba;
+            padding: 10px;
+        }
+
+        .final-price-value {
+            background: #00000040;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 ml-auto  mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto ml-auto font-weight-normal">
+            <img src="http://alume.me/wp-content/uploads/2017/04/logo-in-white.png" alt="Logo">
+        </h5>
+    </div>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Precificação</h1>
+        <p class="lead">Texto Explicativo !! Quickly build an effective pricing table for your potential customers with this Bootstrap example.
+            It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card text-white bg-primary  mb-4 box-shadow">
+                <div class="card-header">
+                    <h2 class="title my-0 font-weight-normal">1º Etapa</h2>
+                    <h3 class="sub-title">Valor Hora (colaborador)</h3>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td>Salário</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">R$</span>
+                                    </div>
+                                    <input type="text" class="form-control change-step-1" id="salary" value="750">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Impostos</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">R$</span>
+                                    </div>
+                                    <input type="text" class="form-control change-step-1" id="taxes" value="50">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Benefícios </td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">R$</span>
+                                    </div>
+                                    <input type="text" class="form-control change-step-1" id="benefits" value="50">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Horas trabalhadas no mês</td>
+                            <td>
+                                <input type="text" class="form-control change-step-1" id="work-hours" value="60">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Resultado</td>
+                            <td>
+                                <input type="text" class="form-control" disabled id="result-1" value="0">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card text-white bg-success mb-4 box-shadow">
+                <div class="card-header">
+                    <h2 class="title my-0 font-weight-normal">2º Etapa</h2>
+                    <h3 class="sub-title">Valor bruto</h3>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td>Valor Hora </td>
+                            <td>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">R$</span>
+                                            </div>
+                                <input type="text" class="form-control change-step-2" disabled="true" id="price-hour" value="14,17">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Horas necessárias para o serviço </td>
+                            <td>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">R$</span>
+                                            </div>
+                                <input type="text" class="form-control change-step-2" id="hours-need" value="15">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Custos fixos</td>
+                            <td>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">R$</span>
+                                            </div>
+                                <input type="text" class="form-control change-step-2" id="fixed-costs" value="5200">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Quantidade de clients atuais</td>
+                            <td>
+                                <input type="text" class="form-control change-step-2" id="number-clients" value="10">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Impostos</td>
+                            <td>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                <input type="text" class="form-control change-step-2" id="tribute" value="15">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Resultado</td>
+                            <td>
+                                <input type="text" class="form-control" disabled id="result-2" value="">
+                            </td>
+                        </tr>
+
+                       
+                    </table>
+                </div>
+            </div>
+
+            <div class="card text-white bg-warning mb-4 box-shadow">
+                <div class="card-header">
+                    <h2 class="title my-0 font-weight-normal">3º Etapa</h2>
+                    <h3 class="sub-title">Preço de Venda</h3>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td>Valor Bruto </td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">R$</span>
+                                    </div>
+                                    <input type="text" class="form-control change-step-3" disabled="true" id="value-brute" value="">
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Margem de lucro</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                    <input type="text" class="form-control change-step-3" id="margin-gain" value="50">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Resultado</td>
+                            <td>
+                                <input type="text" class="form-control" id="result-3" value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                                <td colspan="2">
+                                    <h2 class="final-price-title">Preço Final</h2>
+                                
+                                    <h2 class="final-price-value"></h2>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">© Alume -2018</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    <script>
+var inptSalary=$("#salary"),inptTaxes=$("#taxes"),inptBenefits=$("#benefits"),inptWorkhours=$("#work-hours"),inptResult1=$("#result-1"),inptPriceHour=$("#price-hour"),inptHoursNeed=$("#hours-need"),inptFixedCost=$("#fixed-costs"),inptNumberClients=$("#number-clients"),inptWorkHours=$("#work-hours"),inptTribute=$("#tribute"),inptResult2=$("#result-2"),inptValueBrute=$("#value-brute"),inptMarginGain=$("#margin-gain"),inptResult3=$("#result-3");function calculeStep1(){var e=((parseFloat(inptBenefits.val())+parseFloat(inptSalary.val())+parseFloat(inptTaxes.val()))/parseFloat(inptWorkhours.val())).toFixed(2);inptResult1.val(e),inptPriceHour.val(e)}function calculeStep2(){var e=parseFloat(inptPriceHour.val())*parseFloat(inptHoursNeed.val())+(parseFloat(inptFixedCost.val())/parseFloat(inptNumberClients.val())+1),t=(e*parseFloat(inptTribute.val()/100)+e).toFixed(2);inptResult2.val(t),inptValueBrute.val(t)}function calculeStep3(){var e=parseFloat(inptValueBrute.val())*(parseFloat(inptMarginGain.val())/100)+parseFloat(inptValueBrute.val());inptResult3.val(e.toFixed(2)),$(".final-price-value").html("R$ "+e.toFixed(2))}$(document).ready(function(){calculeStep1(),calculeStep2(),calculeStep3()}),$(".change-step-1").on("keyup change blur",function(){calculeStep1(),calculeStep2(),calculeStep3()}),$(".change-step-2").on("keyup change blur",function(){calculeStep2(),calculeStep3()}),$(".change-step-3").on("keyup change blur",function(){calculeStep3()});
+    </script>
+</body>
+
+</html>
