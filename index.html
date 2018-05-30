@@ -61,6 +61,14 @@
             background: #00000040;
             padding: 10px;
         }
+
+        table td {
+            text-align: left !important;
+        }
+
+        .line-h {
+            line-height: 15px;
+        }
     </style>
 </head>
 
@@ -73,8 +81,9 @@
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Precificação</h1>
-        <p class="lead">Texto Explicativo !! Quickly build an effective pricing table for your potential customers with this Bootstrap example.
-            It's built with default Bootstrap components and utilities with little customization.</p>
+        <p class="lead">Estabelecer o preço de um serviço é uma tarefa bem trabalhosa e que merece muito cuidado. O empreendedor tem que buscar um preço que gere faturamento sem descuidar da satisfação do cliente. A busca por esse ponto de equilíbrio não é fácil, mas existem fórmulas e dicas que podem te ajudar a chegar na precificação perfeita.
+
+            <br></br>O preço de um serviço está relacionado ao quanto de benefício você entrega ao cliente e é calculado da seguinte forma:.</p>
     </div>
 
     <div class="container">
@@ -123,7 +132,7 @@
                         </tr>
 
                         <tr>
-                            <td>Horas trabalhadas no mês</td>
+                            <td class="line-h">Horas trabalhadas no mês</td>
                             <td>
                                 <input type="text" class="form-control change-step-1" id="work-hours" value="60">
                             </td>
@@ -159,14 +168,9 @@
                         </tr>
 
                         <tr>
-                            <td>Horas necessárias para o serviço </td>
+                            <td class="line-h">Horas necessárias para o serviço </td>
                             <td>
-                                    <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">R$</span>
-                                            </div>
                                 <input type="text" class="form-control change-step-2" id="hours-need" value="15">
-                                </div>
                             </td>
                         </tr>
 
@@ -234,13 +238,14 @@
                         </tr>
 
                         <tr>
-                            <td>Margem de lucro</td>
+                            <td class="line-h">Margem de lucro</td>
                             <td>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    
+                                    <input type="text" class="form-control change-step-3" id="margin-gain" value="50">
+                                    <div class="input-group-append">
                                         <span class="input-group-text">%</span>
                                     </div>
-                                    <input type="text" class="form-control change-step-3" id="margin-gain" value="50">
                                 </div>
                             </td>
                         </tr>
@@ -253,12 +258,11 @@
                         </tr>
 
                         <tr>
-                                <td colspan="2">
-                                    <h2 class="final-price-title">Preço Final</h2>
-                                
-                                    <h2 class="final-price-value"></h2>
-                                </td>
-                            </tr>
+                            <td colspan="2">
+                                <h2 class="final-price-title text-center">Preço Final</h2>                        
+                                <h2 class="final-price-value text-center"></h2>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -272,12 +276,6 @@
             </div>
         </footer>
     </div>
-
-
-
-
-
-
 
     <script>
         var inptSalary = $('#salary');
